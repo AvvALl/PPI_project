@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="" xml:lang="">
+<head>
+  <meta charset="utf-8" />
+  <meta name="generator" content="pandoc" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes" />
+  <meta name="author" content="Владислав Арефьев" />
+  <title>Блокнот</title>
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    span.underline{text-decoration: underline;}
+    div.column{display: inline-block; vertical-align: top; width: 50%;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+  </style>
+  <!--[if lt IE 9]>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv-printshiv.min.js"></script>
+  <![endif]-->
+</head>
+<body>
+<header id="title-block-header">
+<h1 class="title">Блокнот</h1>
+<p class="author">Владислав Арефьев</p>
+</header>
+<h1></h1>
+<h2>Описание продукта</h2>
+<p>Блокнот, с проверкой орфографии разговорных языков (не менее двух: английский, русский), учесть наличие тем оформления.</p>
+<h1></h1>
+<h2>Модули программного продукта</h2>
+<p>•Модуль для обработки текста. Предоставляет интерфейс для написания текста и основные функции, а именно сохранение, поиск и прочий функционал для работы с текстом и его внешним видом.</p>
+<p>•Модуль для работы с различными кодировками. Содержит набор функций, позволяющий работать с различными кодировками.</p>
+<p>•Проверка орфографии для русского языка.</p>
+<p>•Проверка орфографии для английского языка</p>
+<p>•Модуль для работы с темами для оформления. Содержит набор инструментов для создания и применения различных тем к блокноту</p>
+<h1>Примеры кода</h1>
+<h2>Пример кода 1</h2>
+<pre><code>            class readingMessage(QtWidgets.QDialog):
+                &quot;&quot;&quot;Класс для чтения сообщений
+                Предназначен для просмотра сообщений
+                Прдеставлен в виде диалогового окна
+                В окне содержаться поля:
+                От кого, кому, тема сообщения, а также поле в виде текстового редактора
+                для чтения сообщений. Содержит таблицу для прилагаемых файлов и кнопоки для загрузки
+
+                Attributes:
+                dirForAttach: путь к папке для сохранения прилагаемых файлов
+                subjectLabel: виджет для вывода темы
+                fromLabel: виджет для вывода отправителя
+                toLabel: виджет для вывода получателя
+                messageTextBrow: виджет для вывода тела сообщения
+                attachTable: виджет для вывода прилагаемых файлов
+                &quot;&quot;&quot;
+
+                dirForAttach=&quot;A:/trash/CPISfiles/attachments/&quot;
+                def __init__(self, msg, client):
+                    super(readingMessage, self).__init__()
+                    self.ui = Ui_readMessageDialog()
+                    self.ui.setupUi(self)
+        </code></pre>
+<h2>Пример кода 2</h2>
+<pre><code>            def path_leaf(self, path):
+                &quot;&quot;&quot;Парсит путь к файлу
+                Args: 
+                  path: путь к сообщения в виде строки
+                Returns:
+                  После парсинга возрващается только имя файла и его разрешение в виде строки
+                &quot;&quot;&quot;
+                    head, tail = ntpath.split(path)
+                    return tail or ntpath.basename(head)
+        </code></pre>
+</body>
+</html>
